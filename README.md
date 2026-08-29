@@ -10,17 +10,24 @@ Modular design to prevent complete failure minimising risk in experimental envir
 Tools and scripts for creation and workarounds to help duplication of project.
 Utilize secured WebUI tools to allow for access from any device.
 
-1) Multiple gateways and multiple agent profiles
+1) Parent and VM dependencies and install scripts.
+  Cuda Drivers and tools.
+    apt version locking for Tesla V100
+      CUDA 12.8 - Nvidia 570 [working]
+      CUDA 13.0 - Nvidia 580 [working] (experimental)
+      CUDA 13.3 - Nvidia 595 [working] (custom dev build: lost my notes so will take time before I remake instructions)
   
 2) Dual Hermes VMs with primary/Parent VM to manage and create Child agents as required.
+  Hermes-Webui (Parent WebUI)
+  Dashboard (Multi agent API gateways)
   
-3) PostgreSQL Local Server (dedicated VM)
+4) PostgreSQL Local Server (dedicated VM)
   with PGadmin4 (WebUI).
 
 5) Hindsight Local External (dedicated VM)
   Control Plane (WebUI).
   
-6) LLM Hosts Ollama, Llama.cp, VM Studio,vLLM.
+6) LLM Hosts on Parent Server.
   a) Ollama
   b) Llama.cp
   c) VM Studio
